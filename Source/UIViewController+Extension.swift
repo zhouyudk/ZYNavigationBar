@@ -63,7 +63,7 @@ extension UIViewController {
     var zy_titleTextAttributes: [NSAttributedStringKey : Any] {
         get{
             guard let attr = objc_getAssociatedObject(self, &ZYAssociatedKeys.zy_titleTextAttributesKey) as? [NSAttributedStringKey : Any] else {
-                return UINavigationBar.appearance().titleTextAttributes  ?? [NSAttributedStringKey : Any]()
+                return UINavigationBar.appearance().titleTextAttributes ?? [NSAttributedStringKey : Any]()
             }
             return attr
         }set {

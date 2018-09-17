@@ -185,13 +185,8 @@ extension ZYNavigationController: UINavigationControllerDelegate{
         
         coordinator.animate(alongsideTransition: { (context) in
             guard self.shouldShowFake(vc: viewController, from: fromVC, to: toVC) else { return }
-//            if self.inGesture {
-//                self.zy_navigationBar.titleTextAttributes = viewController.zy_titleTextAttributes
-//                self.zy_navigationBar.barStyle = viewController.zy_barStyle
-//            }else{
-//                self.updateNavigationBarAnimatedForController(viewController)
-//            }
             self.updateNavigationBarAnimatedForController(viewController)
+            guard !(viewController.zy_backInteractive && viewController.zy_swipeBackEnabled) else { return }
             UIView.performWithoutAnimation {
                 self.zy_navigationBar.fakeView.alpha = 0
                 self.zy_navigationBar.shadowImageView.alpha = 0
@@ -205,11 +200,6 @@ extension ZYNavigationController: UINavigationControllerDelegate{
 
                 self.fromFakeBar.subviews.last?.backgroundColor = fromVC.zy_computedBarTintColor
                 self.fromFakeBar.alpha = (fromVC.zy_barAlpha == 0 || fromVC.zy_computedBarImage != nil) ? 0.01:fromVC.zy_barAlpha
-//                if fromVC.zy_barAlpha == 0 || fromVC.zy_computedBarImage != nil{
-//                    self.fromFakeBar.subviews.last?.alpha = 0.01
-//                }else{
-//                    self.fromFakeBar.subviews.last?.alpha = self.fromFakeBar.alpha
-//                }
                 self.fromFakeBar.frame = self.fakeBarFrameForViewController(fromVC)
                 fromVC.view.addSubview(self.fromFakeBar)
 
@@ -248,19 +238,6 @@ extension ZYNavigationController: UINavigationControllerDelegate{
                 }
             }
         }
-//        if #available(iOS 10.0, *){
-//            coordinator.notifyWhenInteractionChanges({ (context) in
-//                if !context.isCancelled && self.inGesture{
-//                    self.updateNavigationBarAnimatedForController(viewController)
-//                }
-//            })
-//        } else {
-//            coordinator.notifyWhenInteractionEnds({ (context) in
-//                if !context.isCancelled && self.inGesture{
-//                    self.updateNavigationBarAnimatedForController(viewController)
-//                }
-//            })
-//        }
     }
 }
 
@@ -296,6 +273,14 @@ extension ZYNavigationController: UINavigationBarDelegate {
 
 // MARK: - Tool
 extension ZYNavigationController {
+    
+    /// 计算两种颜色的中间色
+    ///
+    /// - Parameters:
+    ///   - from: <#from description#>
+    ///   - to: <#to description#>
+    ///   - percent: <#percent description#>
+    /// - Returns: <#return value description#>
     func blendColor(from:UIColor,to:UIColor,percent:CGFloat) -> UIColor {
         var fromRed: CGFloat = 0
         var fromGreen: CGFloat = 0
@@ -317,6 +302,13 @@ extension ZYNavigationController {
         return UIColor(red: nRed, green: nGreen, blue: nBlue, alpha: nAlpha)
     }
     
+    /// 判断navbar的状态是否相同，用于是否进行动画的判断
+    ///
+    /// - Parameters:
+    ///   - vc: <#vc description#>
+    ///   - from: <#from description#>
+    ///   - to: <#to description#>
+    /// - Returns: <#return value description#>
     func shouldShowFake(vc: UIViewController,from: UIViewController, to:UIViewController) -> Bool {
         guard vc == to  else { return false }
         if from.zy_computedBarImage != nil &&
@@ -339,6 +331,12 @@ extension ZYNavigationController {
         return true
     }
     
+    /// 比较两个image是否相同
+    ///
+    /// - Parameters:
+    ///   - image1: <#image1 description#>
+    ///   - image2: <#image2 description#>
+    /// - Returns: <#return value description#>
     func isEqualImage(_ image1:UIImage,_ image2:UIImage) -> Bool {
         guard image1 != image2 else { return true }
         let data1 = UIImagePNGRepresentation(image1)
