@@ -11,8 +11,6 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var barAlphtLabel: UILabel!
-    var tttttt = 0
-    let barTintColors = [UIColor.green,UIColor.yellow,UIColor.red,UIColor.blue]
     let vc = UIViewController()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,8 +41,6 @@ class ViewController: UIViewController {
     }
     @IBAction func hiddenblackBarStyleSwitchHandle(_ sender: UISwitch) {
         vc.zy_barStyle = sender.isOn ? .black : .default
-//        self.zy_barStyle = sender.isOn ? .black : .default
-//        self.zy_needsUpdateNavigationBar()
     }
     @IBAction func barBackgroundImageSwitchHandle(_ sender: UISwitch) {
         vc.zy_barImage = sender.isOn ? #imageLiteral(resourceName: "image1") : nil
