@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--ZYNavigationBar-->
+        <!--First-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="ZYNavigationBar" customModuleProvider="target" sceneMemberID="viewController">
@@ -304,7 +304,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="ZYNavigationBar" id="ARD-JD-TCp"/>
+                    <navigationItem key="navigationItem" title="First" id="ARD-JD-TCp"/>
                     <connections>
                         <outlet property="barAlphtLabel" destination="hRb-QI-ZRL" id="ooP-xu-zwS"/>
                     </connections>

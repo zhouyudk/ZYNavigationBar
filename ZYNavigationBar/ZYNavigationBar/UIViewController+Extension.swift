@@ -92,11 +92,11 @@ extension UIViewController {
             if newValue {
                 self.navigationItem.leftBarButtonItem = UIBarButtonItem()
                 self.navigationItem.titleView = UIView()
-//                self.navigationItem.hidesBackButton = true
+                self.navigationItem.hidesBackButton = true
             }else{
                 self.navigationItem.leftBarButtonItem = nil
                 self.navigationItem.titleView = nil
-//                self.navigationItem.hidesBackButton = false
+                self.navigationItem.hidesBackButton = false
             }
             objc_setAssociatedObject(self, &ZYAssociatedKeys.zy_barIsHiddenKey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }

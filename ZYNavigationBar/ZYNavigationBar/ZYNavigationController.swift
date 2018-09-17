@@ -237,6 +237,16 @@ extension ZYNavigationController: UINavigationControllerDelegate{
             if toVC == viewController {
                 self.removeFakeView()
             }
+            //解决iOS10及以下，在barIshidden的页面侧滑返回取消时 出现神奇的“...”在navigationBar上
+            if #available(iOS 11.0, *){
+            }else{
+                if context.isCancelled {
+                    let buttItemView = self.navigationBar.subviews.filter { (v) -> Bool in
+                        return "\(type(of: v))" == "UINavigationItemButtonView"
+                    }
+                    buttItemView.first?.isHidden = fromVC.zy_barIsHidden
+                }
+            }
         }
 //        if #available(iOS 10.0, *){
 //            coordinator.notifyWhenInteractionChanges({ (context) in
