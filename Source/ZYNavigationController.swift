@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ZYNavigationController: UINavigationController {
+public class ZYNavigationController: UINavigationController {
     var inGesture = false
     
     var fromFakeBar: UIVisualEffectView =  {
@@ -38,28 +38,28 @@ class ZYNavigationController: UINavigationController {
         return self.navigationBar as! ZYNavigationBar
     }
     
-    override init(rootViewController: UIViewController) {
+    public override init(rootViewController: UIViewController) {
         super.init(navigationBarClass: ZYNavigationBar.classForCoder(), toolbarClass: nil)
         super.viewControllers = [rootViewController]
     }
-    override init(navigationBarClass: AnyClass?, toolbarClass: AnyClass?) {
+    public override init(navigationBarClass: AnyClass?, toolbarClass: AnyClass?) {
         guard let isSubclass = navigationBarClass?.isSubclass(of: ZYNavigationBar.self), isSubclass == true else {
             fatalError("navigationBarClass must be ZYNavigationBar")
         }
         super.init(navigationBarClass: navigationBarClass, toolbarClass: toolbarClass)
     }
 
-    init() {
+    public init() {
         super.init(navigationBarClass: ZYNavigationBar.self, toolbarClass: nil)
     }
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+    public override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
-    required init?(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
 
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         self.interactivePopGestureRecognizer?.delegate = self
         self.interactivePopGestureRecognizer?.addTarget(self, action: #selector(handlePopGesture(recognizer:)))
@@ -130,21 +130,21 @@ class ZYNavigationController: UINavigationController {
         self.zy_navigationBar.shadowImageView.alpha = controller.zy_computedBarShadowAlpha
     }
     
-    override func popViewController(animated: Bool) -> UIViewController? {
+    public override func popViewController(animated: Bool) -> UIViewController? {
         guard let vc = self.topViewController else { return nil }
         let pVC = super.popViewController(animated: animated)
         self.zy_navigationBar.barStyle = vc.zy_barStyle
         self.zy_navigationBar.titleTextAttributes = vc.zy_titleTextAttributes
         return pVC
     }
-    override func popToRootViewController(animated: Bool) -> [UIViewController]? {
+    public override func popToRootViewController(animated: Bool) -> [UIViewController]? {
         guard let vc = self.topViewController else { return nil }
         let pVC = super.popToRootViewController(animated: animated)
         self.zy_navigationBar.barStyle = vc.zy_barStyle
         self.zy_navigationBar.titleTextAttributes = vc.zy_titleTextAttributes
         return pVC
     }
-    override func popToViewController(_ viewController: UIViewController, animated: Bool) -> [UIViewController]? {
+    public override func popToViewController(_ viewController: UIViewController, animated: Bool) -> [UIViewController]? {
         guard let vc = self.topViewController else { return nil }
         let pVCs = super.popToViewController(viewController, animated: animated)
         self.zy_navigationBar.barStyle = vc.zy_barStyle
@@ -169,7 +169,7 @@ extension ZYNavigationController:UIGestureRecognizerDelegate {
         }
     }
     
-    func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+    public func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
         guard let vc = self.topViewController else { return false}
         return self.viewControllers.count > 1 ? (vc.zy_backInteractive && vc.zy_swipeBackEnabled) : false
     }
@@ -177,7 +177,7 @@ extension ZYNavigationController:UIGestureRecognizerDelegate {
 
 // MARK: - UINavigationControllerDelegate
 extension ZYNavigationController: UINavigationControllerDelegate{
-    func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
+    public func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
         guard let coordinator = self.transitionCoordinator,
             let fromVC = coordinator.viewController(forKey: .from),
             let toVC = coordinator.viewController(forKey: .to)
@@ -186,7 +186,6 @@ extension ZYNavigationController: UINavigationControllerDelegate{
         coordinator.animate(alongsideTransition: { (context) in
             guard self.shouldShowFake(vc: viewController, from: fromVC, to: toVC) else { return }
             self.updateNavigationBarAnimatedForController(viewController)
-            guard !(viewController.zy_backInteractive && viewController.zy_swipeBackEnabled) else { return }
             UIView.performWithoutAnimation {
                 self.zy_navigationBar.fakeView.alpha = 0
                 self.zy_navigationBar.shadowImageView.alpha = 0
@@ -243,7 +242,7 @@ extension ZYNavigationController: UINavigationControllerDelegate{
 
 // MARK: - UINavigationBarDelegate
 extension ZYNavigationController: UINavigationBarDelegate {
-    func navigationBar(_ navigationBar: UINavigationBar, shouldPop item: UINavigationItem) -> Bool {
+    public func navigationBar(_ navigationBar: UINavigationBar, shouldPop item: UINavigationItem) -> Bool {
         guard let topVC = self.topViewController else { return false }
         if self.viewControllers.count > 1 && topVC.navigationItem == item{
             if topVC.zy_backInteractive == false {

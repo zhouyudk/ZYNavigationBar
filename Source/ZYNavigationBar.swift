@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ZYNavigationBar: UINavigationBar {
+public class ZYNavigationBar: UINavigationBar {
     var shadowImageView: UIImageView = {
         let v = UIImageView()
         v.isUserInteractionEnabled = false
@@ -35,7 +35,7 @@ class ZYNavigationBar: UINavigationBar {
         return v
     }()
     
-    override var isTranslucent: Bool {
+    public override var isTranslucent: Bool {
         get{
             return super.isTranslucent
         }set{
@@ -46,7 +46,7 @@ class ZYNavigationBar: UINavigationBar {
         }
     }
     
-    override var barTintColor: UIColor? {
+    public override var barTintColor: UIColor? {
         get{
             return self.fakeView.subviews.last?.backgroundColor
         }set{
@@ -55,7 +55,7 @@ class ZYNavigationBar: UINavigationBar {
     }
     
     /// 在swift中重写 shadowImage的get 和set会导致shadowImage始终显示，故此使用didset
-    override var shadowImage: UIImage? {
+    public override var shadowImage: UIImage? {
         willSet{
             self.shadowImageView.image = newValue
         }
@@ -64,7 +64,7 @@ class ZYNavigationBar: UINavigationBar {
         }
     }
     
-    override func layoutSubviews() {
+    public override func layoutSubviews() {
         super.layoutSubviews()
         ///layoutSubviews方法中才能得到self.subviews.first，在awakfromxib和init中都是nil
         setupFakeView()
@@ -95,7 +95,7 @@ class ZYNavigationBar: UINavigationBar {
         }
     }
     
-    override func setBackgroundImage(_ backgroundImage: UIImage?, for barMetrics: UIBarMetrics) {
+    public override func setBackgroundImage(_ backgroundImage: UIImage?, for barMetrics: UIBarMetrics) {
         self.backgroundImageView.image = backgroundImage
     }
 
