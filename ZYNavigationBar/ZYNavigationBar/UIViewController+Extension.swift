@@ -38,8 +38,6 @@ extension UIViewController {
         }set {
             objc_setAssociatedObject(self, &ZYAssociatedKeys.zy_barTintColorKey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
             self.zy_needsUpdateNavigationBarColorOrImage()
-//            guard let bar = self.navigationController?.navigationBar as? ZYNavigationBar else { return }
-//            bar.backgroundImageView?.backgroundColor = newValue
         }
     }
     
@@ -54,7 +52,7 @@ extension UIViewController {
     var zy_tintColor: UIColor {
         get{
             guard let color = objc_getAssociatedObject(self, &ZYAssociatedKeys.zy_tintColorKey) as? UIColor else {
-                return UIColor.red
+                return UIColor.black//UINavigationBar.appearance().tintColor == nil ?  : UINavigationBar.appearance().tintColor
             }
             return color
         }set {
@@ -94,9 +92,11 @@ extension UIViewController {
             if newValue {
                 self.navigationItem.leftBarButtonItem = UIBarButtonItem()
                 self.navigationItem.titleView = UIView()
+//                self.navigationItem.hidesBackButton = true
             }else{
                 self.navigationItem.leftBarButtonItem = nil
                 self.navigationItem.titleView = nil
+//                self.navigationItem.hidesBackButton = false
             }
             objc_setAssociatedObject(self, &ZYAssociatedKeys.zy_barIsHiddenKey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }

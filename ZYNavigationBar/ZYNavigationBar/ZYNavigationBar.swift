@@ -22,7 +22,6 @@ class ZYNavigationBar: UINavigationBar {
         v.contentScaleFactor = 1
         v.contentMode = .scaleToFill
         v.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        v.backgroundColor = UIColor.black
         v.contentMode = .scaleToFill
         v.tag = 1
         return v

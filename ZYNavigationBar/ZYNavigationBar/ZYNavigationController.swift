@@ -98,12 +98,18 @@ class ZYNavigationController: UINavigationController {
         self.updateNavigationBarColorOrImageForViewController(controller)
     }
     
+    /// update target controller barStyle
+    ///
+    /// - Parameter controller: targetController
     func updateNavigationBarAnimatedForController(_ controller:UIViewController) {
         self.zy_navigationBar.barStyle = controller.zy_barStyle
         self.zy_navigationBar.titleTextAttributes = controller.zy_titleTextAttributes
         self.zy_navigationBar.tintColor = controller.zy_tintColor
     }
     
+    /// update target controller barAlpha and shadowAlpha
+    ///
+    /// - Parameter controller:
     func updateNavigationBarAlphaForViewController(_ controller:UIViewController) {
         if controller.zy_computedBarImage != nil {
             self.zy_navigationBar.fakeView.alpha = 0
@@ -179,13 +185,13 @@ extension ZYNavigationController: UINavigationControllerDelegate{
         
         coordinator.animate(alongsideTransition: { (context) in
             guard self.shouldShowFake(vc: viewController, from: fromVC, to: toVC) else { return }
-            if self.inGesture {
-                self.zy_navigationBar.titleTextAttributes = viewController.zy_titleTextAttributes
-                self.zy_navigationBar.barStyle = viewController.zy_barStyle
-            }else{
-                self.updateNavigationBarAnimatedForController(viewController)
-            }
-            
+//            if self.inGesture {
+//                self.zy_navigationBar.titleTextAttributes = viewController.zy_titleTextAttributes
+//                self.zy_navigationBar.barStyle = viewController.zy_barStyle
+//            }else{
+//                self.updateNavigationBarAnimatedForController(viewController)
+//            }
+            self.updateNavigationBarAnimatedForController(viewController)
             UIView.performWithoutAnimation {
                 self.zy_navigationBar.fakeView.alpha = 0
                 self.zy_navigationBar.shadowImageView.alpha = 0
@@ -199,9 +205,11 @@ extension ZYNavigationController: UINavigationControllerDelegate{
 
                 self.fromFakeBar.subviews.last?.backgroundColor = fromVC.zy_computedBarTintColor
                 self.fromFakeBar.alpha = (fromVC.zy_barAlpha == 0 || fromVC.zy_computedBarImage != nil) ? 0.01:fromVC.zy_barAlpha
-                if fromVC.zy_barAlpha == 0 || fromVC.zy_computedBarImage != nil{
-                    self.fromFakeBar.subviews.last?.alpha = 0.01
-                }
+//                if fromVC.zy_barAlpha == 0 || fromVC.zy_computedBarImage != nil{
+//                    self.fromFakeBar.subviews.last?.alpha = 0.01
+//                }else{
+//                    self.fromFakeBar.subviews.last?.alpha = self.fromFakeBar.alpha
+//                }
                 self.fromFakeBar.frame = self.fakeBarFrameForViewController(fromVC)
                 fromVC.view.addSubview(self.fromFakeBar)
 
@@ -230,19 +238,19 @@ extension ZYNavigationController: UINavigationControllerDelegate{
                 self.removeFakeView()
             }
         }
-        if #available(iOS 10.0, *){
-            coordinator.notifyWhenInteractionChanges({ (context) in
-                if !context.isCancelled && self.inGesture{
-                    self.updateNavigationBarForViewController(controller: viewController)
-                }
-            })
-        } else {
-            coordinator.notifyWhenInteractionEnds({ (context) in
-                if !context.isCancelled && self.inGesture{
-                    self.updateNavigationBarForViewController(controller: viewController)
-                }
-            })
-        }
+//        if #available(iOS 10.0, *){
+//            coordinator.notifyWhenInteractionChanges({ (context) in
+//                if !context.isCancelled && self.inGesture{
+//                    self.updateNavigationBarAnimatedForController(viewController)
+//                }
+//            })
+//        } else {
+//            coordinator.notifyWhenInteractionEnds({ (context) in
+//                if !context.isCancelled && self.inGesture{
+//                    self.updateNavigationBarAnimatedForController(viewController)
+//                }
+//            })
+//        }
     }
 }
 

@@ -16,11 +16,12 @@ class ViewController: UIViewController {
     let vc = UIViewController()
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.automaticallyAdjustsScrollViewInsets = false
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-//        self.zy_barTintColor = UIColor.brown
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -42,6 +43,8 @@ class ViewController: UIViewController {
     }
     @IBAction func hiddenblackBarStyleSwitchHandle(_ sender: UISwitch) {
         vc.zy_barStyle = sender.isOn ? .black : .default
+//        self.zy_barStyle = sender.isOn ? .black : .default
+//        self.zy_needsUpdateNavigationBar()
     }
     @IBAction func barBackgroundImageSwitchHandle(_ sender: UISwitch) {
         vc.zy_barImage = sender.isOn ? #imageLiteral(resourceName: "image1") : nil
