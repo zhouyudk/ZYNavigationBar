@@ -21,6 +21,8 @@ public extension UIViewController {
         static var zy_backInteractiveKey = "zy_backInteractiveKey"
         static var zy_swipeBackEnabledKey = "zy_swipeBackEnabledKey"
     }
+    
+    /// navigationBar样式
     public var zy_barStyle: UIBarStyle {
         get{
             guard let style = objc_getAssociatedObject(self, &ZYAssociatedKeys.zy_barStyleKey) as? UIBarStyle else {
@@ -32,6 +34,7 @@ public extension UIViewController {
         }
     }
     
+    /// navigationBar背景色，可以通过设置color的alpha值实现毛玻璃
     public var zy_barTintColor: UIColor? {
         get {
             return objc_getAssociatedObject(self, &ZYAssociatedKeys.zy_barTintColorKey) as? UIColor
@@ -41,6 +44,7 @@ public extension UIViewController {
         }
     }
     
+    /// navigationBar背景图，优先级高于zy_barTintColor，设置后zy_barTintColor失效
     public var zy_barImage: UIImage? {
         get {
             return objc_getAssociatedObject(self, &ZYAssociatedKeys.zy_barImageKey) as? UIImage
@@ -49,6 +53,7 @@ public extension UIViewController {
         }
     }
     
+    /// navigationItem颜色
     public var zy_tintColor: UIColor {
         get{
             guard let color = objc_getAssociatedObject(self, &ZYAssociatedKeys.zy_tintColorKey) as? UIColor else {
@@ -60,6 +65,7 @@ public extension UIViewController {
         }
     }
     
+    /// navigationItem标题
     public var zy_titleTextAttributes: [NSAttributedStringKey : Any] {
         get{
             guard let attr = objc_getAssociatedObject(self, &ZYAssociatedKeys.zy_titleTextAttributesKey) as? [NSAttributedStringKey : Any] else {
@@ -71,6 +77,7 @@ public extension UIViewController {
         }
     }
     
+    /// navigationBar背景透明度
     public var zy_barAlpha: CGFloat {
         get{
             if self.zy_barIsHidden {
@@ -85,6 +92,7 @@ public extension UIViewController {
         }
     }
     
+    /// 是否显示navigationBar
     public var zy_barIsHidden: Bool {
         get{
             return objc_getAssociatedObject(self, &ZYAssociatedKeys.zy_barIsHiddenKey) as? Bool ?? false
@@ -102,6 +110,7 @@ public extension UIViewController {
         }
     }
     
+    /// 是否显示shadowImage
     public var zy_barShadowIsHidden: Bool {
         get{
             return zy_barIsHidden ? zy_barIsHidden : objc_getAssociatedObject(self, &ZYAssociatedKeys.zy_barShadowIsHiddenKey) as? Bool ?? false
@@ -109,7 +118,7 @@ public extension UIViewController {
             objc_setAssociatedObject(self, &ZYAssociatedKeys.zy_barShadowIsHiddenKey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
     }
-    
+    /// 是否可以右滑返回和navigationBar返回按钮返回
     public var zy_backInteractive: Bool {
         get{
             return objc_getAssociatedObject(self, &ZYAssociatedKeys.zy_backInteractiveKey) as? Bool ?? true
@@ -118,6 +127,7 @@ public extension UIViewController {
         }
     }
     
+    /// 右滑返回
     public var zy_swipeBackEnabled: Bool {
         get{
             return objc_getAssociatedObject(self, &ZYAssociatedKeys.zy_swipeBackEnabledKey) as? Bool ?? true

@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.automaticallyAdjustsScrollViewInsets = false
+        vc.zy_barTintColor = UIColor.blue
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -65,8 +66,8 @@ class ViewController: UIViewController {
         v.zy_barIsHidden = vc.zy_barIsHidden
         v.zy_barShadowIsHidden = vc.zy_barShadowIsHidden
         v.zy_barStyle = vc.zy_barStyle
+        v.title = "\(Int(self.navigationItem.title!)!+1)"
         self.navigationController?.pushViewController(v, animated: true)
     }
-    
 }
 
