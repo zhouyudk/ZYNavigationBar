@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name          = "ZYNavigationBar"
-  s.version       = "1.0.2"
+  s.version       = "1.0.3"
   s.summary       = "A Custom UINavigationBar."
   s.homepage      = "https://github.com/zhouyudk/ZYNavigationBar/"
   s.license       = { :type => "MIT", :file => "LICENSE" }
