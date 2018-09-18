@@ -3,7 +3,10 @@
 
 
 ## GIF展示
-![image](https://note.youdao.com/yws/api/personal/file/WEBd81319574fd4e7b7c79079b506946140?method=download&shareKey=210cbfdaf9dbeef34549c90d84c1547b)
+![image](https://note.youdao.com/yws/api/personal/file/WEB15de47d32d83166870a7e98f47ab8733?method=download&shareKey=fc081d7f877b9bb44649e3afb82affa0)
+![image](https://note.youdao.com/yws/api/personal/file/WEB47d6d3ed1c80b01985e70825bc038ace?method=download&shareKey=dd10f88528dde7f4d28594912ce9df45)
+![image](https://note.youdao.com/yws/api/personal/file/WEBcf69ae46f80304157c3f7d69cfefdda0?method=download&shareKey=adef0433b241a3e4c0bd2836687b284a)
+![image](https://note.youdao.com/yws/api/personal/file/WEB112faeaef4c35097821b40097fa6784d?method=download&shareKey=9b879bd7f76386dfd1323ef9ed4161ce)
 
 
 ## 安装
@@ -29,9 +32,9 @@
 ```
 #### 2. 在storyboard中使用
 
-	![image](https://note.youdao.com/yws/api/personal/file/WEB602855175ebf8835cceaab95fb7d1528?method=download&shareKey=204ac1615682e569454bf933d446a9ef)
+![image](https://note.youdao.com/yws/api/personal/file/WEB602855175ebf8835cceaab95fb7d1528?method=download&shareKey=204ac1615682e569454bf933d446a9ef)
     
-	![image](https://note.youdao.com/yws/api/personal/file/WEBb6ec0e8fc4937f142ece67842d3846ff?method=download&shareKey=32f71f41c21f9d182b5d9e68572a9b4d)
+![image](https://note.youdao.com/yws/api/personal/file/WEBb6ec0e8fc4937f142ece67842d3846ff?method=download&shareKey=32f71f41c21f9d182b5d9e68572a9b4d)
 
 
 ### 使用 `UIViewController` 的扩展属性对navigationBar进行配置
@@ -59,10 +62,11 @@
 ```
 
 ## 注意事项
-	1. 当设置 `zy_barImage` 时，`zy_barTintColor` 将失效
-	2. 如果需要毛玻璃效果，可以设置 `zy_barTintColor` 时调整color的 `alpha` 值
-	3. 目前只支持 `isTranslucent` 为 `true`
-	4. `ZYNavigationBar` 必须配合 `ZYNavigationController` 一起使用，否则无效果
+
+  1. 当设置 `zy_barImage` 时，`zy_barTintColor` 将失效
+  2. 如果需要毛玻璃效果，可以设置 `zy_barTintColor` 时调整color的 `alpha` 值
+  3. 目前只支持 `isTranslucent` 为 `true`
+  4. `ZYNavigationBar` 必须配合 `ZYNavigationController` 一起使用，否则无效果
 
 ## Swift版本
 
