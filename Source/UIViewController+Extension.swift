@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UIViewController {
+public extension UIViewController {
     fileprivate struct ZYAssociatedKeys{
         static var zy_barStyleKey = "zy_barStyleKey"
         static var zy_barTintColorKey = "zy_barTintColorKey"
@@ -21,7 +21,7 @@ extension UIViewController {
         static var zy_backInteractiveKey = "zy_backInteractiveKey"
         static var zy_swipeBackEnabledKey = "zy_swipeBackEnabledKey"
     }
-    var zy_barStyle: UIBarStyle {
+    public var zy_barStyle: UIBarStyle {
         get{
             guard let style = objc_getAssociatedObject(self, &ZYAssociatedKeys.zy_barStyleKey) as? UIBarStyle else {
                 return UINavigationBar.appearance().barStyle
@@ -32,7 +32,7 @@ extension UIViewController {
         }
     }
     
-    var zy_barTintColor: UIColor? {
+    public var zy_barTintColor: UIColor? {
         get {
             return objc_getAssociatedObject(self, &ZYAssociatedKeys.zy_barTintColorKey) as? UIColor
         }set {
@@ -41,7 +41,7 @@ extension UIViewController {
         }
     }
     
-    var zy_barImage: UIImage? {
+    public var zy_barImage: UIImage? {
         get {
             return objc_getAssociatedObject(self, &ZYAssociatedKeys.zy_barImageKey) as? UIImage
         }set {
@@ -49,7 +49,7 @@ extension UIViewController {
         }
     }
     
-    var zy_tintColor: UIColor {
+    public var zy_tintColor: UIColor {
         get{
             guard let color = objc_getAssociatedObject(self, &ZYAssociatedKeys.zy_tintColorKey) as? UIColor else {
                 return UIColor.black//UINavigationBar.appearance().tintColor == nil ?  : UINavigationBar.appearance().tintColor
@@ -60,7 +60,7 @@ extension UIViewController {
         }
     }
     
-    var zy_titleTextAttributes: [NSAttributedStringKey : Any] {
+    public var zy_titleTextAttributes: [NSAttributedStringKey : Any] {
         get{
             guard let attr = objc_getAssociatedObject(self, &ZYAssociatedKeys.zy_titleTextAttributesKey) as? [NSAttributedStringKey : Any] else {
                 return UINavigationBar.appearance().titleTextAttributes ?? [NSAttributedStringKey : Any]()
@@ -71,7 +71,7 @@ extension UIViewController {
         }
     }
     
-    var zy_barAlpha: CGFloat {
+    public var zy_barAlpha: CGFloat {
         get{
             if self.zy_barIsHidden {
                 return 0
@@ -85,7 +85,7 @@ extension UIViewController {
         }
     }
     
-    var zy_barIsHidden: Bool {
+    public var zy_barIsHidden: Bool {
         get{
             return objc_getAssociatedObject(self, &ZYAssociatedKeys.zy_barIsHiddenKey) as? Bool ?? false
         }set {
@@ -102,7 +102,7 @@ extension UIViewController {
         }
     }
     
-    var zy_barShadowIsHidden: Bool {
+    public var zy_barShadowIsHidden: Bool {
         get{
             return zy_barIsHidden ? zy_barIsHidden : objc_getAssociatedObject(self, &ZYAssociatedKeys.zy_barShadowIsHiddenKey) as? Bool ?? false
         }set {
@@ -110,7 +110,7 @@ extension UIViewController {
         }
     }
     
-    var zy_backInteractive: Bool {
+    public var zy_backInteractive: Bool {
         get{
             return objc_getAssociatedObject(self, &ZYAssociatedKeys.zy_backInteractiveKey) as? Bool ?? true
         }set {
@@ -118,7 +118,7 @@ extension UIViewController {
         }
     }
     
-    var zy_swipeBackEnabled: Bool {
+    public var zy_swipeBackEnabled: Bool {
         get{
             return objc_getAssociatedObject(self, &ZYAssociatedKeys.zy_swipeBackEnabledKey) as? Bool ?? true
         }set {
@@ -147,22 +147,22 @@ extension UIViewController {
     }
     
     
-    func zy_needsUpdateNavigationBar() {
+    public func zy_needsUpdateNavigationBar() {
         guard let nav = self.navigationController as? ZYNavigationController else { return }
         nav.updateNavigationBarForViewController(controller: self)
     }
     
-    func zy_needsUpdateNavigationBarAlpha() {
+    public func zy_needsUpdateNavigationBarAlpha() {
         guard let nav = self.navigationController as? ZYNavigationController else { return }
         nav.updateNavigationBarAlphaForViewController(self)
     }
     
-    func zy_needsUpdateNavigationBarColorOrImage() {
+    public func zy_needsUpdateNavigationBarColorOrImage() {
         guard let nav = self.navigationController as? ZYNavigationController else { return }
         nav.updateNavigationBarColorOrImageForViewController(self)
     }
     
-    func zy_needsUpdateNavigationBarShadowAlpha() {
+    public func zy_needsUpdateNavigationBarShadowAlpha() {
         guard let nav = self.navigationController as? ZYNavigationController else { return }
         nav.updateNavigationBarShadowAlphaForViewController(self)
     }
