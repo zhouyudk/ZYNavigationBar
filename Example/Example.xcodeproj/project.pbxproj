@@ -7,122 +7,112 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B5439787214FAC9900C63AD4 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5439784214FAC9900C63AD4 /* UIViewController+Extension.swift */; };
-		B5439788214FAC9900C63AD4 /* ZYNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5439785214FAC9900C63AD4 /* ZYNavigationBar.swift */; };
-		B5439789214FAC9900C63AD4 /* ZYNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5439786214FAC9900C63AD4 /* ZYNavigationController.swift */; };
-		B5AD2C8C2147738300B6A454 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AD2C8B2147738300B6A454 /* AppDelegate.swift */; };
-		B5AD2C8E2147738300B6A454 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AD2C8D2147738300B6A454 /* ViewController.swift */; };
-		B5AD2C912147738300B6A454 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5AD2C8F2147738300B6A454 /* Main.storyboard */; };
-		B5AD2C932147738300B6A454 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5AD2C922147738300B6A454 /* Assets.xcassets */; };
-		B5AD2C962147738300B6A454 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5AD2C942147738300B6A454 /* LaunchScreen.storyboard */; };
+		B58BBB84215CE58000A9EB8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58BBB83215CE58000A9EB8D /* AppDelegate.swift */; };
+		B58BBB86215CE58000A9EB8D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58BBB85215CE58000A9EB8D /* ViewController.swift */; };
+		B58BBB89215CE58000A9EB8D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B58BBB87215CE58000A9EB8D /* Main.storyboard */; };
+		B58BBB8B215CE58000A9EB8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B58BBB8A215CE58000A9EB8D /* Assets.xcassets */; };
+		B58BBB8E215CE58000A9EB8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B58BBB8C215CE58000A9EB8D /* LaunchScreen.storyboard */; };
+		B5C77DD5215CE626005A113D /* ZYNavigationBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5C77DD6215CE626005A113D /* ZYNavigationBar.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B5439784214FAC9900C63AD4 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
-		B5439785214FAC9900C63AD4 /* ZYNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYNavigationBar.swift; sourceTree = "<group>"; };
-		B5439786214FAC9900C63AD4 /* ZYNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYNavigationController.swift; sourceTree = "<group>"; };
-		B5AD2C882147738300B6A454 /* ZYNavigationBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZYNavigationBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B5AD2C8B2147738300B6A454 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B5AD2C8D2147738300B6A454 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B5AD2C902147738300B6A454 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		B5AD2C922147738300B6A454 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B5AD2C952147738300B6A454 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		B5AD2C972147738300B6A454 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B58BBB80215CE58000A9EB8D /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B58BBB83215CE58000A9EB8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B58BBB85215CE58000A9EB8D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B58BBB88215CE58000A9EB8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B58BBB8A215CE58000A9EB8D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B58BBB8D215CE58000A9EB8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B58BBB8F215CE58000A9EB8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5C77DD6215CE626005A113D /* ZYNavigationBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ZYNavigationBar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		B5AD2C852147738300B6A454 /* Frameworks */ = {
+		B58BBB7D215CE58000A9EB8D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5C77DD5215CE626005A113D /* ZYNavigationBar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B5439783214FAC9900C63AD4 /* Source */ = {
+		B58BBB77215CE58000A9EB8D = {
 			isa = PBXGroup;
 			children = (
-				B5439784214FAC9900C63AD4 /* UIViewController+Extension.swift */,
-				B5439785214FAC9900C63AD4 /* ZYNavigationBar.swift */,
-				B5439786214FAC9900C63AD4 /* ZYNavigationController.swift */,
-			);
-			path = Source;
-			sourceTree = "<group>";
-		};
-		B5AD2C7F2147738300B6A454 = {
-			isa = PBXGroup;
-			children = (
-				B5AD2C8A2147738300B6A454 /* ZYNavigationBar */,
-				B5AD2C892147738300B6A454 /* Products */,
-				B5439783214FAC9900C63AD4 /* Source */,
+				B58BBB82215CE58000A9EB8D /* Example */,
+				B58BBB81215CE58000A9EB8D /* Products */,
+				B5C77DD4215CE626005A113D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		B5AD2C892147738300B6A454 /* Products */ = {
+		B58BBB81215CE58000A9EB8D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B5AD2C882147738300B6A454 /* ZYNavigationBar.app */,
+				B58BBB80215CE58000A9EB8D /* Example.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B5AD2C8A2147738300B6A454 /* ZYNavigationBar */ = {
+		B58BBB82215CE58000A9EB8D /* Example */ = {
 			isa = PBXGroup;
 			children = (
-				B5AD2C8B2147738300B6A454 /* AppDelegate.swift */,
-				B5AD2C8D2147738300B6A454 /* ViewController.swift */,
-				B5AD2C8F2147738300B6A454 /* Main.storyboard */,
-				B5AD2C922147738300B6A454 /* Assets.xcassets */,
-				B5AD2C942147738300B6A454 /* LaunchScreen.storyboard */,
-				B5AD2C972147738300B6A454 /* Info.plist */,
+				B58BBB83215CE58000A9EB8D /* AppDelegate.swift */,
+				B58BBB85215CE58000A9EB8D /* ViewController.swift */,
+				B58BBB87215CE58000A9EB8D /* Main.storyboard */,
+				B58BBB8A215CE58000A9EB8D /* Assets.xcassets */,
+				B58BBB8C215CE58000A9EB8D /* LaunchScreen.storyboard */,
+				B58BBB8F215CE58000A9EB8D /* Info.plist */,
 			);
-			path = ZYNavigationBar;
+			path = Example;
+			sourceTree = "<group>";
+		};
+		B5C77DD4215CE626005A113D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B5C77DD6215CE626005A113D /* ZYNavigationBar.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B5AD2C872147738300B6A454 /* ZYNavigationBar */ = {
+		B58BBB7F215CE58000A9EB8D /* Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B5AD2C9A2147738300B6A454 /* Build configuration list for PBXNativeTarget "ZYNavigationBar" */;
+			buildConfigurationList = B58BBB92215CE58000A9EB8D /* Build configuration list for PBXNativeTarget "Example" */;
 			buildPhases = (
-				B5AD2C842147738300B6A454 /* Sources */,
-				B5AD2C852147738300B6A454 /* Frameworks */,
-				B5AD2C862147738300B6A454 /* Resources */,
+				B58BBB7C215CE58000A9EB8D /* Sources */,
+				B58BBB7D215CE58000A9EB8D /* Frameworks */,
+				B58BBB7E215CE58000A9EB8D /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = ZYNavigationBar;
-			productName = ZYNavigationBar;
-			productReference = B5AD2C882147738300B6A454 /* ZYNavigationBar.app */;
+			name = Example;
+			productName = Example;
+			productReference = B58BBB80215CE58000A9EB8D /* Example.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		B5AD2C802147738300B6A454 /* Project object */ = {
+		B58BBB78215CE58000A9EB8D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0910;
 				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = "yu zhou";
 				TargetAttributes = {
-					B5AD2C872147738300B6A454 = {
+					B58BBB7F215CE58000A9EB8D = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
-						SystemCapabilities = {
-							com.apple.BackgroundModes = {
-								enabled = 1;
-							};
-						};
 					};
 				};
 			};
-			buildConfigurationList = B5AD2C832147738300B6A454 /* Build configuration list for PBXProject "ZYNavigationBar" */;
+			buildConfigurationList = B58BBB7B215CE58000A9EB8D /* Build configuration list for PBXProject "Example" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -130,57 +120,54 @@
 				en,
 				Base,
 			);
-			mainGroup = B5AD2C7F2147738300B6A454;
-			productRefGroup = B5AD2C892147738300B6A454 /* Products */;
+			mainGroup = B58BBB77215CE58000A9EB8D;
+			productRefGroup = B58BBB81215CE58000A9EB8D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B5AD2C872147738300B6A454 /* ZYNavigationBar */,
+				B58BBB7F215CE58000A9EB8D /* Example */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		B5AD2C862147738300B6A454 /* Resources */ = {
+		B58BBB7E215CE58000A9EB8D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5AD2C962147738300B6A454 /* LaunchScreen.storyboard in Resources */,
-				B5AD2C932147738300B6A454 /* Assets.xcassets in Resources */,
-				B5AD2C912147738300B6A454 /* Main.storyboard in Resources */,
+				B58BBB8E215CE58000A9EB8D /* LaunchScreen.storyboard in Resources */,
+				B58BBB8B215CE58000A9EB8D /* Assets.xcassets in Resources */,
+				B58BBB89215CE58000A9EB8D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		B5AD2C842147738300B6A454 /* Sources */ = {
+		B58BBB7C215CE58000A9EB8D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5439788214FAC9900C63AD4 /* ZYNavigationBar.swift in Sources */,
-				B5439787214FAC9900C63AD4 /* UIViewController+Extension.swift in Sources */,
-				B5AD2C8E2147738300B6A454 /* ViewController.swift in Sources */,
-				B5AD2C8C2147738300B6A454 /* AppDelegate.swift in Sources */,
-				B5439789214FAC9900C63AD4 /* ZYNavigationController.swift in Sources */,
+				B58BBB86215CE58000A9EB8D /* ViewController.swift in Sources */,
+				B58BBB84215CE58000A9EB8D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B5AD2C8F2147738300B6A454 /* Main.storyboard */ = {
+		B58BBB87215CE58000A9EB8D /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				B5AD2C902147738300B6A454 /* Base */,
+				B58BBB88215CE58000A9EB8D /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		B5AD2C942147738300B6A454 /* LaunchScreen.storyboard */ = {
+		B58BBB8C215CE58000A9EB8D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				B5AD2C952147738300B6A454 /* Base */,
+				B58BBB8D215CE58000A9EB8D /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -188,7 +175,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		B5AD2C982147738300B6A454 /* Debug */ = {
+		B58BBB90215CE58000A9EB8D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -245,7 +232,7 @@
 			};
 			name = Debug;
 		};
-		B5AD2C992147738300B6A454 /* Release */ = {
+		B58BBB91215CE58000A9EB8D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -295,32 +282,32 @@
 			};
 			name = Release;
 		};
-		B5AD2C9B2147738300B6A454 /* Debug */ = {
+		B58BBB93215CE58000A9EB8D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 784Z62Q47H;
-				INFOPLIST_FILE = ZYNavigationBar/Info.plist;
+				INFOPLIST_FILE = Example/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = zy.ZYNavigationBar;
+				PRODUCT_BUNDLE_IDENTIFIER = zy.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		B5AD2C9C2147738300B6A454 /* Release */ = {
+		B58BBB94215CE58000A9EB8D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 784Z62Q47H;
-				INFOPLIST_FILE = ZYNavigationBar/Info.plist;
+				INFOPLIST_FILE = Example/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = zy.ZYNavigationBar;
+				PRODUCT_BUNDLE_IDENTIFIER = zy.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -330,25 +317,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B5AD2C832147738300B6A454 /* Build configuration list for PBXProject "ZYNavigationBar" */ = {
+		B58BBB7B215CE58000A9EB8D /* Build configuration list for PBXProject "Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B5AD2C982147738300B6A454 /* Debug */,
-				B5AD2C992147738300B6A454 /* Release */,
+				B58BBB90215CE58000A9EB8D /* Debug */,
+				B58BBB91215CE58000A9EB8D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B5AD2C9A2147738300B6A454 /* Build configuration list for PBXNativeTarget "ZYNavigationBar" */ = {
+		B58BBB92215CE58000A9EB8D /* Build configuration list for PBXNativeTarget "Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B5AD2C9B2147738300B6A454 /* Debug */,
-				B5AD2C9C2147738300B6A454 /* Release */,
+				B58BBB93215CE58000A9EB8D /* Debug */,
+				B58BBB94215CE58000A9EB8D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = B5AD2C802147738300B6A454 /* Project object */;
+	rootObject = B58BBB78215CE58000A9EB8D /* Project object */;
 }
