@@ -22,7 +22,7 @@
 1. 下载 `ZYNavigationBar` 文件夹内的所有内容。
 2. 将 `ZYNavigationBar` 内 `Source` 目录文件添加(拖放)到你的工程。
 
-# 使用
+## 使用
 #### 1. 代码使用 `ZYNavigationController` 创建
 
 ```swift
