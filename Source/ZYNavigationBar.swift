@@ -28,7 +28,7 @@ public class ZYNavigationBar: UINavigationBar {
     }()
     
     var fakeView: UIVisualEffectView = {
-        let v = UIVisualEffectView(effect: UIBlurEffect(style: UIBlurEffectStyle.light))
+        let v = UIVisualEffectView(effect: UIBlurEffect(style: UIBlurEffect.Style.light))
         v.isUserInteractionEnabled = false
         v.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         v.tag = 1

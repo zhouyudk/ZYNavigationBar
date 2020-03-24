@@ -338,8 +338,8 @@ extension ZYNavigationController {
     /// - Returns: <#return value description#>
     func isEqualImage(_ image1:UIImage,_ image2:UIImage) -> Bool {
         guard image1 != image2 else { return true }
-        let data1 = UIImagePNGRepresentation(image1)
-        let data2 = UIImagePNGRepresentation(image2)
+        let data1 = image1.pngData()
+        let data2 = image2.pngData()
         
         return data1 == data2
     }

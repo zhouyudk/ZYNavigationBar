@@ -7,16 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B580DB0E242A02DE00E9B5C9 /* ZYNavigationBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5C77DD6215CE626005A113D /* ZYNavigationBar.framework */; };
+		B580DB0F242A02DE00E9B5C9 /* ZYNavigationBar.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B5C77DD6215CE626005A113D /* ZYNavigationBar.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B58BBB84215CE58000A9EB8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58BBB83215CE58000A9EB8D /* AppDelegate.swift */; };
 		B58BBB86215CE58000A9EB8D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58BBB85215CE58000A9EB8D /* ViewController.swift */; };
 		B58BBB89215CE58000A9EB8D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B58BBB87215CE58000A9EB8D /* Main.storyboard */; };
 		B58BBB8B215CE58000A9EB8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B58BBB8A215CE58000A9EB8D /* Assets.xcassets */; };
 		B58BBB8E215CE58000A9EB8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B58BBB8C215CE58000A9EB8D /* LaunchScreen.storyboard */; };
-		B5C77DD5215CE626005A113D /* ZYNavigationBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5C77DD6215CE626005A113D /* ZYNavigationBar.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		B580DB10242A02DE00E9B5C9 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B580DB0F242A02DE00E9B5C9 /* ZYNavigationBar.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		B58BBB80215CE58000A9EB8D /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B58BBB80215CE58000A9EB8D /* ZYNavigationBarExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZYNavigationBarExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B58BBB83215CE58000A9EB8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B58BBB85215CE58000A9EB8D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B58BBB88215CE58000A9EB8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -31,7 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5C77DD5215CE626005A113D /* ZYNavigationBar.framework in Frameworks */,
+				B580DB0E242A02DE00E9B5C9 /* ZYNavigationBar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,7 +65,7 @@
 		B58BBB81215CE58000A9EB8D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B58BBB80215CE58000A9EB8D /* Example.app */,
+				B58BBB80215CE58000A9EB8D /* ZYNavigationBarExample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -86,6 +101,7 @@
 				B58BBB7C215CE58000A9EB8D /* Sources */,
 				B58BBB7D215CE58000A9EB8D /* Frameworks */,
 				B58BBB7E215CE58000A9EB8D /* Resources */,
+				B580DB10242A02DE00E9B5C9 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -93,7 +109,7 @@
 			);
 			name = Example;
 			productName = Example;
-			productReference = B58BBB80215CE58000A9EB8D /* Example.app */;
+			productReference = B58BBB80215CE58000A9EB8D /* ZYNavigationBarExample.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -103,11 +119,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0910;
-				LastUpgradeCheck = 0910;
+				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = "yu zhou";
 				TargetAttributes = {
 					B58BBB7F215CE58000A9EB8D = {
 						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 1120;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -189,6 +206,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -196,6 +214,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -246,6 +265,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -253,6 +273,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -287,13 +308,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 784Z62Q47H;
+				DEVELOPMENT_TEAM = S6RF4D9458;
 				INFOPLIST_FILE = Example/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = zy.Example;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				PRODUCT_BUNDLE_IDENTIFIER = zy.ZYNavigationBar.example;
+				PRODUCT_NAME = ZYNavigationBarExample;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -303,13 +324,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 784Z62Q47H;
+				DEVELOPMENT_TEAM = S6RF4D9458;
 				INFOPLIST_FILE = Example/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = zy.Example;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				PRODUCT_BUNDLE_IDENTIFIER = zy.ZYNavigationBar.example;
+				PRODUCT_NAME = ZYNavigationBarExample;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
