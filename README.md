@@ -70,7 +70,7 @@
 
 ## Swift版本
 
-	Swift 4.0
+	Swift 5.0
 
 
 ## Requirements
